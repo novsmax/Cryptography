@@ -55,12 +55,8 @@ def gcd(a, b):
     return a
 
 
-# Расширенный алгоритм Евклида для нахождения модульной инверсии
 def extended_gcd(a, b):
-    """
-    Находит наибольший общий делитель чисел a и b,
-    а также коэффициенты x и y, такие что: ax + by = gcd(a, b)
-    """
+
     if a == 0:
         return b, 0, 1
     else:
@@ -70,7 +66,6 @@ def extended_gcd(a, b):
         return gcd_value, x, y
 
 
-# Функция для нахождения модульной инверсии
 def mod_inverse(a, m):
     gcd_value, x, y = extended_gcd(a, m)
     if gcd_value != 1:
@@ -79,9 +74,7 @@ def mod_inverse(a, m):
         return (x % m + m) % m
 
 def generate_prime(bits):
-    """
-    Генерирует простое число с заданным количеством бит.
-    """
+
     while True:
         candidate = random.getrandbits(bits)
         candidate |= (1 << bits - 1) | 1
@@ -91,9 +84,7 @@ def generate_prime(bits):
 
 
 def generate_RSA_key(bits=1024):
-    """
-    Генерирует пару ключей RSA: открытый (e, n) и закрытый (d, n).
-    """
+
     p = generate_prime(bits // 2)
     q = generate_prime(bits // 2)
 
