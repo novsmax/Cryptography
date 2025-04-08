@@ -61,7 +61,6 @@ decrypted = decrypt(encrypted, private_key)
 ### Диффи-Хеллман
 
 ```python
-diffie_hellman_demo()
 
 # Задание р, g и генерация открытых и приватных ключей
 p, g = generate_dh_parameters(bits=512)
