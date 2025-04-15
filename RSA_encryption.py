@@ -145,7 +145,7 @@ def main(key_size):
     print(f"Открытый ключ (e, n): {public_key}")
     print(f"Закрытый ключ (d, n): {private_key}")
 
-    message = "Привет, давай прогуляем пару"
+    message = input("Введите ваше сообщение:  ")
     print(f"\nИсходное сообщение: {message}")
 
     encrypted = encrypt(message, public_key)
@@ -160,4 +160,4 @@ def main(key_size):
         print("\nОшибка! Cообщение не совпадает с исходным.")
 
 
-main(1024)
+main(512)

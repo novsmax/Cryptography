@@ -122,7 +122,7 @@ def main():
     print(f"Боб вычисляет: K = X^y mod p = {alice_public}^{bob_private} mod {p} = {bob_shared}")
 
     if alice_shared == bob_shared:
-        print("\n✓Алиса и Боб получили одинаковый общий секретный ключ!")
+        print("\nАлиса и Боб получили одинаковый общий секретный ключ!")
         print(f"Общий секретный ключ: {alice_shared}")
     else:
         print("\n✗ Ошибка! Алиса и Боб получили разные ключи.")
